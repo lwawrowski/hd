@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  train_150:
+    cmd: python train_model.py
+    deps:
+    - path: train_model.py
+      hash: md5
+      md5: df5b2d8e0a5017df946fd97dcd13dbea
+      size: 1588
+    outs:
+    - path: metrics_150.json
+      hash: md5
+      md5: 28d02a3808a34daca2553ce45e6c721b
+      size: 62
+    - path: predictions_150.csv
+      hash: md5
+      md5: 561648587a8b558eec6bc7e93c03748c
+      size: 103856

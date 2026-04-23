@@ -1,3 +1,4 @@
+from fastapi import params
 import pandas as pd
 import numpy as np
 
@@ -8,6 +9,8 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
 
 import json
+
+import yaml
 
 def train_model(n_estimators):
 
@@ -26,6 +29,11 @@ def train_model(n_estimators):
         test_size=0.2,
         random_state=42
     )
+
+    with open("params.yaml") as f:
+        params = yaml.safe_load(f)
+
+    n_estimators = params["n_estimators"]
 
     model = RandomForestRegressor(
         n_estimators=n_estimators,
@@ -75,4 +83,4 @@ def train_model(n_estimators):
 
 if __name__ == "__main__":
 
-    train_model(200)
+    train_model(150)

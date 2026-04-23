@@ -1,0 +1,10 @@
+stages:
+  train_150:
+    cmd: python train_model.py
+    deps:
+    - train_model.py
+    outs:
+    - predictions_150.csv
+    metrics:
+    - metrics_150.json:
+        cache: false
