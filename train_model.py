@@ -75,4 +75,4 @@ def train_model(n_estimators):
 
 if __name__ == "__main__":
 
-    train_model(50)
+    train_model(100)

@@ -1,1 +1,3 @@
 mlruns/
+/predictions_100.csv
+/metrics_100.json
